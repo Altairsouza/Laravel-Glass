@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+section#conteudo {
+    width: 1000px;
+    margin: 50px auto 50px auto;
+}
+iframe#frame-spec{
+    display: block;
+    posotion: relative;
+width: 400px;
+height:350px ;
+border: none;
+overflow: hidden; /* serve para tirar a barra de rolagem, mais tem q ser no body google-glass.html e aqui tb */
+
+
+
+}
+img.mofador{
+    position: relative;
+    float: left;
+    margin-left: -50px;
+    padding-right: 150px;
+    
+}

@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+ul#album-fotos{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    overflow: hidden;
+    list-style-type: none;
+}
+
+ul#album-fotos li {
+    float: left; /* agora a tabela vai ficar um do lado do outro */
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border:5px solid white;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 3px rgb(0, 0,0.4);/* serve pra criar sombra */
+    transition: all .5s ease-in; /* ele esta alterando quando a foto cresce em transition fica, a ideia aqui é ela crescer de uma forma mais suave e bonita */
+}
+
+ul#album-fotos li span { /* ele usou span em todos as li  e agora ele esta controlando a visuabilidade da legenda*/
+    opacity:0;
+    text-shadow: 1px 1px 1px #000000 ; /* ta criando sombra para texto e se for para outro tipo é box-shadow */
+    background-color: white;
+    font-size: 11pt;
+    line-height: 550px;/* a legenda estava no topo agora com line-height ele vai fica em baixo */
+    padding: 5px;
+
+}
+ul#album-fotos li:hover { /* to fazendo para todas imanges quando passaro mause ela vai ficar grande */
+    transform: scale(1.5);/* aqui vai vai mostrar o tamanho do quadro da imagem */
+}
+
+ul#album-fotos li:hover span{
+    opacity: 1;
+}
+
+ul#album-fotos li#foto01{
+    background: url("/img/galeria-01.jpg")no-repeat ;
+    background-position:80% 80% ; /* to mostrando o meio da imagem pra quando passar o mause ele fica toda grande certinha */
+    background-size: 500px 500px;/* to falando qual é o tamanho da minha imagem */
+    background-color: #ffffff;
+}
+
+ul#album-fotos li#foto01:hover { /* as imagens ta voltando ao tamanho original para da o feito da imagem grande para a imagem normal */
+    background-position: 0px 0px;
+    background-size: 300px 300px
+}
+
+ul#album-fotos li#foto02{
+    background: url("/img/galeria-02.jpg")no-repeat ;
+    background-position:80% 80% ; /* to mostrando o meio da imagem pra quando passar o mause ele fica toda grande certinha */
+    background-size: 500px 500px;/* to falando qual é o tamanho da minha imagem */
+    background-color: #ffffff;
+}
+
+ul#album-fotos li#foto02:hover { /* as imagens ta voltando ao tamanho original para da o feito da imagem grande para a imagem normal */
+    background-position: 0px 0px;
+    background-size: 300px 300px
+}
+
+ul#album-fotos li#foto03{
+    background: url("/img/galeria-03.jpg")no-repeat ;
+    background-position:80% 80% ; /* to mostrando o meio da imagem pra quando passar o mause ele fica toda grande certinha */
+    background-size: 500px 500px;/* to falando qual é o tamanho da minha imagem */
+    background-color: #ffffff;
+}
+
+ul#album-fotos li#foto03:hover { /* as imagens ta voltando ao tamanho original para da o feito da imagem grande para a imagem normal */
+    background-position: 0px 0px;
+    background-size: 300px 300px
+}
+
+ul#album-fotos li#foto04{
+    background: url("/img/galeria-04.jpg")no-repeat ;
+    background-position:80% 80% ; /* to mostrando o meio da imagem pra quando passar o mause ele fica toda grande certinha */
+    background-size: 500px 500px;/* to falando qual é o tamanho da minha imagem */
+    background-color: #ffffff;
+}
+
+ul#album-fotos li#foto04:hover { /* as imagens ta voltando ao tamanho original para da o feito da imagem grande para a imagem normal */
+    background-position: 0px 0px;
+    background-size: 300px 300px
+}
+
+ul#album-fotos li#foto05{
+    background: url("/img/galeria-05.jpg")no-repeat ;
+    background-position:80% 80% ; /* to mostrando o meio da imagem pra quando passar o mause ele fica toda grande certinha */
+    background-size: 500px 500px;/* to falando qual é o tamanho da minha imagem */
+    background-color: #ffffff;
+}
+
+ul#album-fotos li#foto05:hover { /* as imagens ta voltando ao tamanho original para da o feito da imagem grande para a imagem normal */
+    background-position: 0px 0px;
+    background-size: 300px 300px
+}
+
+ul#album-fotos li#foto06{
+    background: url("/img/galeria-06.jpg")no-repeat ;
+    background-position:80% 80% ; /* to mostrando o meio da imagem pra quando passar o mause ele fica toda grande certinha */
+    background-size: 500px 500px;/* to falando qual é o tamanho da minha imagem */
+    background-color: #ffffff;
+}
+
+ul#album-fotos li#foto06:hover { /* as imagens ta voltando ao tamanho original para da o feito da imagem grande para a imagem normal */
+    background-position: 0px 0px;
+    background-size: 300px 300px
+}
+

@@ -1,0 +1,278 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+@font-face{
+    font-family:'fontelogo' ; /* aqui vc define o fone da sua fonte pode ser qualquer nome tu imaginar em aspas simples*/
+    src: url(../_fonts/bubblegum-sans-regular.otf);
+}
+p {
+    text-align:justify;
+    text-indent:50px;
+}
+body {
+    background-color: aliceblue; /* mudar a cor do fundo do site */
+    /*  color: rgba(0,0,0,0.5); transparencia das letras vai de 0.0 a 1*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+div#interface {
+    width: 1550; /* os pixel da tela vai mostrar ate quantos % pode expandir a tela */
+    background-color: #f5f3f0; /* colocando cor de fundo na margem */
+    margin: -10px auto 10px auto;/* as 4 margens(a tela toda) primerio de cima direto baixo e esquerda  */
+    box-shadow: 0px 0px 10px black; /* vai criar uma sombra em volta do objeto 1ª px é deslocamento lateral 2ª deslocamento vertical 3ª espalhamento das sombras*/
+    padding: 10px 10px 10px 10px ; /* ele vai configurar o espacamento interno de dentro pra fora e vai rola o msm esquema os 4 pixel os 4 cantos */
+}
+img#icone { /* está reconfigurando a imagem do oculos, configurando outras coisas ele acabou saindo do lugar(acredito eu deixando pra colocar o oculos depois fica mais facil ou tanto faz) */
+    position: absolute;
+    left: 1300px;
+    height: 150px;
+    top: 60;
+}
+header#cabecalho {
+    border-bottom: 1px #606060 solid; /* criando borda primeiro pixel e a largura segundo a cor e terceiro se continua tracejada pontilhada etc */
+    height:  150px; /*  espacamento da altura de cima pra baixo */
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 1px 90px; /* a imagem ficou repetindo pq era piquena tiver q colocar no repeat para ficar so uma imagem e o resto e a posicao */
+}
+a{
+    color: #606060;
+    text-decoration: none; /* sem decoracao no texto aqui é os link dos sites */
+}
+a:hover{
+    text-decoration: underline; /* quando passar o mause em cima dos link vai aparecer um traco em baixo */
+}
+header#cabecalho h1{
+    font-family: 'fontelogo',sans-serif;
+    font-size: 60px; /* tamanho da fonte */
+    color: #606060;
+    text-shadow:  1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px ; /* define o espaçamento entre o conteúdo e a borda de um elemento HTML */
+    margin-bottom: 0px;/* vai mecher so na margem de baixo */
+    position: relative;
+    bottom: 30;
+
+}
+header#cabecalho h2{
+    font-family: 'Titillium Web', sans-serif;
+    color: #888888;
+    font-size: 20pt; /* tamanho da fonte */
+    padding: 1px;/* define o espaçamento entre o conteúdo e a borda de um elemento HTML */
+    position: relative;
+    top: -40px;
+
+
+
+}
+
+/* formatacao de imagens com legenda */
+
+figure.fotos-legenda{ /*aqui tem q pegar o nome q colocou na class fingure*/
+    position: relative; /* pra arrumar o nome da pozicao da imagem pra ficar dentro da imagem o nome*/
+    border: 4px hidden red; /* largura da borda(8 pixel) tipo de borda(solida) cor da borda(vermelho)*/
+    box-shadow: 1px 1px 4px black rgba(0,0,0,.5); /* vai criar uma sombra em volta do objeto 1ª px é deslocamento lateral 2ª deslocamento vertical 3ª espalhamento das sombras                        rgba consigo controlar a transparencia da*/
+}
+
+
+figure.fotos-legenda img {
+    width: 90%;        /* largura isso é as bordas da imagem*/
+    height: 50%;      /* altura*/
+}
+
+figure.fotos-legenda figcaption { /* padrao absoluto para tudo q estiver dentro da borda*/
+    opacity: 0; /*deixando o texto invisivel pra depois usar outra ferramenta pra quando passarp mause em cima aparecer o texto*/
+    position: absolute;/*ele vai poder ficar em cima de outras imagens e pode ficar em qualquer lugar do site   e posição relativa ele so mexer dentro da caixa*/
+    top:0px; /* vem acompanahdo da position para ficar alinhado*/
+    background-color: rgba(0,0,0,.4); /*pro nome da imagem ficar transparente */
+    color: white; /* escolhendo a cor da borda do nome da imagem (uma nova maneira de ver o mundo)*/
+    width: 90%; /* e esses dois é largura e o de baixo e altura*/
+    height: 100%;
+    padding: 10px; /* ele vai aumentar o tamanho da cor da imagem no fundo  a sombra vai ficar mais ajustada*/
+    box-sizing: border-box; /*serve pra arrumar a borda centralizala*/
+    transition: opacity 1s ; /*quando passar o mause em cima da foto vai demorar 1 segunda pra ela aprecer*/
+}
+figure.fotos-legenda:hover figcaption{ /* ao passar o mause em frente a foto vai conseguir ver a legenda*/
+    opacity: 1; /* aqui é a capacidade de visualizacao da imagem de 0.0 a 1 */
+}
+
+/*                     formatação do menu                            */
+nav#menu{
+    display: block; /* ele esta criando um bloco para o meu menur e depois eu conseguir fazer flutuante */
+}
+nav#menu ul {
+  list-style: none; /*remove as marcação da lista como por exemlo(1,2,3)(a.b.c) */
+    text-transform: uppercase; /* todas as letras do meu menu vao ficar em maisculo*/
+    position: absolute; /*ele vai poder ficar em cima de outras imagens e pode ficar em qualquer lugar do site      e posição relativa ele so mexer dentro da caixa*/
+    top: -20px; /*agora esse dois vai me falar aonde q ele vai ficar nessa possicao absoluta*/
+    left: 600px; /*-20px pra ele colar o menu no topo do site e 1000px é pra colocar ele do lado esquerdo*/
+}
+
+nav#menu li{
+    display: inline-block; /* ele vai fazer os intens da lista menu ficar um do lado do outro*/
+    background-color: #dddddd; /* ele vai colocar uma cor no fundo da imagem ou texto*/
+    padding: 4px; /* ele vai aumentar o tamanho da cor da imagem no fundo  a sombra vai ficar mias ajustada*/
+    margin: 2px; /* ele vai aumentar o espaco entre as caixas como por exemplo um nome mais distante do outro*/
+    transition: 1s;/*ele ta falando q vai demorar um segundo pra mudar a cor do back background-color do hover(q deixa os intens flutuantes) */
+}
+nav#menu li:hover{ /*funcao pra quando o mause estiver em cima da lista, aqui por exemplo vai mudar a cor */
+        background-color: black; /* e quer vai mudar a cor quando o mause for passado por cima*/
+}
+nav#menu h1{
+    display: none;/* vamos esconer o nome menu principal ele vai servir so pra busca do google msm*/
+}
+nav#menu a { /* aqui vai formatar todo q estiver no menu q tenha link */
+    color:black;
+    text-decoration: none; /* remove a o traco q fica de baixo do nome */
+
+}
+nav#menu a:hover{
+    color:blanchedalmond; /* quando o mause passar pro cima a letra fica branca */
+    text-decoration: underline; /* quando passar o mause por cima fica uma listra em baixo do nome  isso é uma questao de gosto*/
+}
+section#corpo {
+    display: block; /* display vai ser feito em bloco */
+    width: 1000px; /* tamanho do corpo */
+    float: left; /* vou fazer o meu corpo flutuar pelo lado esquerdo */
+    border-right: 1px solid #606060; /* to aqui criando uma bora do lado direito */
+    padding-right: 15px;/* a minha estava colada na borda o padding vai da uma espacamento */
+
+}
+article#noticia-principal h2{
+    font-size: 12pt;
+    color: rgba(0, 0, 0, 0.842);
+    background-color: #dddddd;
+    padding: 5px 0px 5px 0px;
+    margin: 10px 0px 10px 0px;
+
+
+}
+header#cabecalho-artigo h1{
+font-family: 'fontelogo',sans-serif; /* é um modelo de fonte mais bonito quando for utilizar pesquisar no google como ela é */
+font-size: 20pt;
+color: #606060;
+margin-bottom: 0px;
+margin-top: 0px;
+}
+.direita{
+    text-align: right; /* o texto va ficar na direita */
+
+}
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    color: #606060;
+    background-color: #60606000;
+    margin-bottom: 0px ;
+
+
+}
+header#cabecalho-artigo h3{
+    font-size: 12px;
+    color: #606060;
+
+}
+
+
+
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px; /* vai remover o espacamento entre as celulas criadas (td) */
+    margin-left: auto; /* margem da esquerda ta em automatico */
+    margin-right: auto;
+}
+table#tabelaspec td{
+    border:1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;/* as palavras por camera e conectividade vao ficar no topo do seu tr pq ele tem o espacamento maior bottom vai ficar em baixo  middle vai alinhar no centro*/
+}
+table#tabelaspec td.colunaesquerda {/* esse aqui é o metodo class parecido com o ide td.colunaesquerda(esse é id pra chamar a class) */
+color: #ffffff;
+background-color: #606060;
+vertical-align: top;/* as palavras por camera e conectividade vao ficar no topo do seu tr pq ele tem o espacamento maior bottom vai ficar em baixo  middle vai alinhar no centro*/
+font-weight: bold; /* aqui é uma fonte negrito */
+}
+table#tabelaspec td.colunadireita{
+    color: floralwhite;
+    background-color: cecece;
+
+}
+table#tabelaspec td.colunacentro{
+    color:floralwhite;
+    background-color: darkslategrey;
+}
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 15pt; /* tamanho da fonte */
+    font-weight:bold ; /* aqui é uma fonte negrito */
+}
+table#tabelaspec caption span {
+    display: block; /* ele vai se desconectar do texto */
+    float: right; /* ele vai ficar flutuante na direita */
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+aside#lateral {
+    display: block; /* display vai ser feito em bloco */
+    width: 500px; /* tamanho do corpo */
+    float: right; /* fazer a minha lateral flutuar do lado direito */
+    background-color: #dddddd;
+    padding:10px ;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5); /* vou criar uma sombra rgba é a porcetagem de transparencia */
+
+}
+aside#lateral h1{
+font-family: 'fontelogo',sans-serif;
+font-size: 20pt;
+color: #606060;
+margin-top: 0px; /* arruma a margem de cima */
+}
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 15pt;
+    color: #ffffff;
+    padding: 10px;
+
+
+}
+footer#rodape{
+    clear: both;/* ele esta mandando limpar a configuracao dos dois lado, ja q ele e o rodape vai precisar da parte toda de baixo  */
+    border-top: 1px solid #606060;
+}
+footer#rodape p {
+    text-align: center;
+    position: relative;
+}
+
+
+
+/*dashboard*/
+
+.dashboard-title-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .dashboard-events-container th {
+    width: 25%;
+    
+  }
+  
+
+
+
+  .dashboard-events-container form {
+    display: inline-block;
+  }
+
+ #listar th {
+     float: left;
+     width: 100%;
+    margin-right: -50px;
+    text-align: rigth;
+    padding-top: 10px;
+ }
+
+  
+.sair {
+    width: 40%;
+}
